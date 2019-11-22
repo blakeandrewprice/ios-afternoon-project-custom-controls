@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BBn-m8-9Rc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="xb7-2S-2M8">
+            <objects>
+                <viewController id="fxj-cL-RyV" customClass="ViewController" customModule="StarRating" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pIV-Xo-SIc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view verifyAmbiguity="ignoreSizes" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVU-La-Qv1" customClass="CustomControl" customModule="StarRating" customModuleProvider="target">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <connections>
+                                    <action selector="updateRating:" destination="fxj-cL-RyV" eventType="valueChanged" id="btG-Bk-Wc3"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vVU-La-Qv1" firstAttribute="centerX" secondItem="pIV-Xo-SIc" secondAttribute="centerX" id="e1z-Ma-lu8"/>
+                            <constraint firstItem="vVU-La-Qv1" firstAttribute="centerY" secondItem="pIV-Xo-SIc" secondAttribute="centerY" id="oJp-nB-J5K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZGd-H9-JJg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZoM-66-VNY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXz-ep-1d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2131.8840579710145" y="-107.14285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bUn-JK-qS7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BBn-m8-9Rc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HCy-9f-abl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fxj-cL-RyV" kind="relationship" relationship="rootViewController" id="Mbp-Wp-RKD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MY7-ew-nBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.7391304347827" y="-107.14285714285714"/>
+        </scene>
+    </scenes>
+</document>
