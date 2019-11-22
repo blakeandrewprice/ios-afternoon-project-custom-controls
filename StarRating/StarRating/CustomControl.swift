@@ -66,8 +66,11 @@ class CustomControl: UIControl {
             label.textAlignment = .center
             label.text = "⭑"
             
-            if n == 1 { label.textColor = componentActiveColor }
-            else { label.textColor = componentInactiveColor }
+            if n == 1 {
+                label.textColor = componentActiveColor
+            } else {
+                label.textColor = componentInactiveColor
+            }
             
             labels.append(label)
         }
